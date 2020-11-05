@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+   <title>D004-Calculando o Troco</title>
+   <style>
+      body {
+         font: 12pt Arial;
+      }
+
+      button {
+         font-size: 12pt;
+         padding: 30px;
+      }
+   </style>
+</head>
+
+<body>
+   <h1>Calculando o Troco</h1>
+   <button onclick="inicio()">Comprar Produto</button>
+   <script>
+      function inicio() {
+         let nomeProduto = window.prompt('Que produto você está comprando?')
+         let valorProduto = Number(window.prompt(`Quanto custa o ${nomeProduto} que você está comprando?`))
+         let valorRecebido = Number(window.prompt(`Qual valor que você deu para pagar o ${nomeProduto}?`))
+         let troco = valorRecebido - valorProduto
+         window.alert(`Você comprou um ${nomeProduto} que custou R$ ${valorProduto.toFixed(2).replace('.', ',')}. Deu R$ ${valorRecebido.toFixed(2).replace('.', ',')} em dinheiro e vai receber R$ ${troco.toFixed(2).replace('.', ',')} de troco. Volte Sempre!`)
+      }
+   </script>
+
+
+</body>
+
+</html>
