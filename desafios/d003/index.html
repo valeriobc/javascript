@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+   <title>D003-Antecessor e Sucessor</title>
+   <style>
+      body {
+         font: 12pt Arial; 
+      }
+      button {
+         font-size: 12pt;
+         padding: 30px;
+      }
+   </style>
+</head>
+<body>
+   <h1>Antes e Depois</h1>
+   <button onclick="inicio()">Antecessor e Sucessor</button>
+   <script>
+      function inicio() {
+         let numInt = Number.parseInt(window.prompt('Digite um número inteiro qualquer'))
+         numAnt = numInt - 1
+         numSuc = numInt + 1
+         window.alert('Antes de ' + numInt + ', temos o número ' + numAnt + '.                                                               ' + 'Depois de ' + numInt + ', temos o número' + numSuc + '.')
+      }
+   </script>
+
+   
+</body>
+</html>
