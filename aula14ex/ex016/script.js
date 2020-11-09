@@ -18,35 +18,35 @@ function contar() {
    } else if (passoobj.value.length == 0 || passo == 0) {
       window.alert('Impossível contar: Valor de Passo Inválido! Considerando passo = 1')
       passo = 1
-      if (nufi >=0) {
+      if (nufi >= c) {
          res.innerHTML = `Contando: <br>`
-         while (c <= nufi) {
+         for ( c ; c <= nufi; c+=passo ) {
             res.innerHTML += `${c}`
             res.innerHTML += `&#x1f449`
-            c += passo
          }
+         res.innerHTML += `&#x1f3c1`
       } else {
          res.innerHTML = `Contando: <br>`
-         while (c > nufi) {
+         for ( c ; c > nufi ; c -= passo) {
             res.innerHTML += `${c}`
             res.innerHTML += `&#x1f449`
-            c -= passo
          }
+         res.innerHTML += `&#x1f3c1`
       } 
       
-   } else if (nufi >=0) {
+   } else if (nufi >= c){
       res.innerHTML = `Contando: <br>`
-      while (c <= nufi) {
+      for ( c ; c <= nufi ; c += passo ) {
          res.innerHTML += `${c}`
          res.innerHTML += `&#x1f449`
-         c += passo
       }
-   } else {
+      res.innerHTML += `&#x1f3c1`
+   } else  {
       res.innerHTML = `Contando: <br>`
-      while (c > nufi) {
+      for ( c ; c >= nufi ; c -= passo ) {
          res.innerHTML += `${c}`
          res.innerHTML += `&#x1f449`
-         c -= passo
       }
-   } 
+      res.innerHTML += `&#x1f3c1`
+   }  
 }
