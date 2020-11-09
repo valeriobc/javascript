@@ -1,8 +1,16 @@
 var c = 1
-while (c < 6) {
-   console.log('Tudo Bem?')
+do {
+   console.log(`Passo ${c}`)
    c++
-}
+}while (c <=10)
+
+
+
+/*var c = 1
+while (c <= 100) {
+   console.log(`Passo ${c}`)
+   c++
+}*/
 
 
 /*console.log('Tudo Bem?')
