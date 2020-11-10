@@ -1,5 +1,5 @@
-var num = []
-var pos = 0
+let num = []
+let pos = 0
 let numobj = window.document.querySelector('input#txtnum')
 numobj.value = ''
 numobj.focus()
