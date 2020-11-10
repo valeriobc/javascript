@@ -15,7 +15,7 @@ function contar() {
    } else if (nufiobj.value.length == 0) {
       res.innerHTML = 'Impossível contar: Sem Valor de Fim!'
 
-   } else if (passoobj.value.length == 0 || passo == 0) {
+   } else if (passoobj.value.length == 0 || passo == 0 || passo < 0) {
       window.alert('Impossível contar: Valor de Passo Inválido! Considerando passo = 1')
       passo = 1
       if (nufi >= c) {
@@ -27,7 +27,7 @@ function contar() {
          res.innerHTML += `&#x1f3c1`
       } else {
          res.innerHTML = `Contando: <br>`
-         for ( c ; c > nufi ; c -= passo) {
+         for ( c ; c >= nufi ; c -= passo) {
             res.innerHTML += `${c}`
             res.innerHTML += `&#x1f449`
          }
