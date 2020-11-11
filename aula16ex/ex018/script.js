@@ -1,6 +1,6 @@
 let num = []
-let pos = 0
 let numobj = window.document.querySelector('input#txtnum')
+let resobj = window.document.querySelector('div#res')
 numobj.value = ''
 numobj.focus()
 
@@ -11,34 +11,34 @@ function adicionar() {
    if (numobj.value.length == 00 || numobj.value == 00 || numobj.value > 99 || numexiste != -1) {
       window.alert('[ERRO!] Valor inválido ou já encontrado na lista!')
    } else {
-      num[pos] = numobj.value
-      //window.alert(`pos = ${pos} e num[pos] = ${num[pos]}`)
-      if (pos == 0) {
-         selobj.innerHTML = ''
-      }
+      num.push(Number(numobj.value))
       let item = window.document.createElement('option')
-      item.text = `Valor ${num[pos]} adiccionado na p${pos}`
+      item.text = `Valor ${num[pos]} adiccionado na p${numexiste}}`
       selobj.appendChild(item)
-      pos++
+      resobj.innerHTML = ''
    }
    numobj.value = ''
    numobj.focus()
 }
 
 function finalizar() {
-   let resobj = window.document.querySelector('div#res')
-   resobj.innerHTML = ''
-   resobj.innerHTML += `Ao todo, temos ${num.length} números cadastrados. <br> <br>`
-   num.sort()
-   let ultnum = num[num.length - 1]
-   resobj.innerHTML += `O maior valor informado foi ${ultnum}. <br> <br>`
-   resobj.innerHTML += `O menor valor informado foi ${num[0]}. <br> <br>`
-   var soma = 0
-   for (let c in num) {
-      soma += Number(num[c])
+   if (num.length == 0) {
+      window.alert('Adicione valores antes de finalizar')
+   } else {
+      
+      resobj.innerHTML = ''
+      resobj.innerHTML += `<p>Ao todo, temos ${num.length} números cadastrados.</p>`
+      num.sort()
+      let ultnum = num[num.length - 1]
+      resobj.innerHTML += `<p>O maior valor informado foi ${ultnum}.</p>`
+      resobj.innerHTML += `<p>O menor valor informado foi ${num[0]}.</p>`
+      var soma = 0
+      for (let c in num) {
+         soma += Number(num[c])
+      }
+      resobj.innerHTML += `<p>Somando todos os valores, temos ${soma}.</p>`
+      resobj.innerHTML += `<p>A média dos valores digitados é ${(soma / num.length).toFixed(2).replace('.', ',')}.</p>`
    }
-   resobj.innerHTML += `Somando todos os valores, temos ${soma}. <br> <br>`
-   resobj.innerHTML += `A média dos valores digitados é ${(soma / num.length).toFixed(2).replace('.', ',')}. <br> <br>`
    numobj.value = ''
    numobj.focus()
 }
