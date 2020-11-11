@@ -26,6 +26,7 @@ function adicionar() {
       let item = document.createElement('option')
       item.text = `Valor ${num.value} adicionado`
       lista.appendChild(item)
+      res.innerHTML = ''
    } else {
       window.alert('Valor inválido ou já encontrado na lista.')
    }
@@ -40,6 +41,8 @@ function finalizar() {
       let tot = valores.length
       let maior = valores[0]
       let menor = valores[0]
+      let soma = 0
+      let media = 0
       for(let pos in valores) {
          if(valores[pos] > maior) {
             maior = valores[pos]
@@ -47,46 +50,16 @@ function finalizar() {
          if(valores[pos] < menor) {
             menor = valores[pos]
          }
+         soma += valores[pos]
       }
+      media = soma / tot
       res.innerHtml = ''
       res.innerHTML += `<p>Ao todo, temos ${tot} números cadastrados.</p>`
       res.innerHTML += `<p>O maior valor informado foi ${maior}.</p>`
       res.innerHTML += `<p>O menor valor informado foi ${menor}.</p>`
+      res.innerHTML += `<p>Somando todos os valores, temos ${soma}.</p>`
+      res.innerHTML += `<p>A média dos valores digitados é ${media}.</p>`
    }
+   num.value = ''
+   num.focus()
 }
-   /*
-   let numexiste = num.indexOf(numobj.value)
-   if (numobj.value.length == 00 || numobj.value == 00 || numobj.value > 99 || numexiste != -1) {
-      window.alert('[ERRO!] Valor inválido ou já encontrado na lista!')
-   } else {
-      num[pos] = numobj.value
-      //window.alert(`pos = ${pos} e num[pos] = ${num[pos]}`)
-      if (pos == 0) {
-         selobj.innerHTML = ''
-      }
-      let item = window.document.createElement('option')
-      item.text = `Valor ${num[pos]} adiccionado na p${pos}`
-      selobj.appendChild(item)
-      pos++
-   }
-   numobj.value = ''
-   numobj.focus()
-}
-
-function finalizar() {
-   let resobj = window.document.querySelector('div#res')
-   resobj.innerHTML = ''
-   resobj.innerHTML += `Ao todo, temos ${num.length} números cadastrados. <br> <br>`
-   num.sort()
-   let ultnum = num[num.length - 1]
-   resobj.innerHTML += `O maior valor informado foi ${ultnum}. <br> <br>`
-   resobj.innerHTML += `O menor valor informado foi ${num[0]}. <br> <br>`
-   var soma = 0
-   for (let c in num) {
-      soma += Number(num[c])
-   }
-   resobj.innerHTML += `Somando todos os valores, temos ${soma}. <br> <br>`
-   resobj.innerHTML += `A média dos valores digitados é ${(soma / num.length).toFixed(2).replace('.', ',')}. <br> <br>`
-   numobj.value = ''
-   numobj.focus()
-} */
