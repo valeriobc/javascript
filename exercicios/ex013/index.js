@@ -6,10 +6,10 @@ switch(diaSem) {
       console.log('Hoje é Domingo missa e praia céu de anil')
       break
    case 1:
-      console.log('Hoje é segunda beijo na bunda')
+      console.log('Segunda-Feira')
       break
    case 2:
-      console.log('Hoje é Terça dia de comer a Terça')
+      console.log('Terça-Feira')
       break
    case 3:
       console.log('Quarta-Feira')
