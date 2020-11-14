@@ -13,6 +13,6 @@ function greet() {
    // variável b não pode ser usada aqui
    console.log(a + ' ' + b); // error
 }
-// variável a não pode ser usad aqui
+// variável a não pode ser usada aqui
 
 greet();
