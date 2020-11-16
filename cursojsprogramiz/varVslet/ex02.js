@@ -1,5 +1,5 @@
 // programa para imprimir texto
-// viável a não pode ser usada aqui
+// variável a não pode ser usada aqui
 function greet() {
    let a = 'hello';
 
