@@ -6,7 +6,7 @@ const text3 = '      JavaScript      ';
 const result1 = text1.concat(' ', text2);
 console.log(result1); // hello world
 
-// convertendo o texto par amaiúsculas
+// convertendo o texto para maiúsculas
 const result2 = text1.toUpperCase();
 console.log(result2); // HELLO
 
@@ -17,6 +17,8 @@ console.log(result3); // JavaScript
 // convertendo a string para um array
 const result4 = text1.split();
 console.log(result4); // [ 'hello' ]
+
+console.log(result4[0]); // hello
 
 // fatiando a string
 const result5 = text1.slice(1, 3);
