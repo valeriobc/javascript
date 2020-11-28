@@ -4,6 +4,7 @@ function validatePhone(num) {
 
    // verifica se o número de telefone é válido
    let result = num.match(re);
+   console.log(result);
    if (result) {
       console.log('The number is valid.');
    }
@@ -16,6 +17,6 @@ function validatePhone(num) {
 }
 
 // take input
-console.log('Entrando nº 234-322-3432');
+console.log('Entrando nº 234-323-3432');
 let number = '234-322-3432'; //prompt('Enter a number XXX-XXX-XXXX format');
 validatePhone(number);
