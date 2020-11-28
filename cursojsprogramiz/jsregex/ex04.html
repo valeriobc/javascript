@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+   <title>Ex04 RegEx</title>
+</head>
+<body>
+   <script>
+      function validatePhone(num) {
+         const re = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/g;
+
+         // verifica se o número de telefone é válido
+         let result = num.match(re);
+         if (result) {
+            window.alert('The number is valid.');
+         }else {
+            let num = parseFloat(window.prompt("Entre number in XXX-XXX-XXXX format: "));
+            validatePhone(num);
+         }
+      }
+
+      // take input
+      let number = parseFloat(window.prompt('Enter a number XXX-XXX-XXXX format'));
+      validatePhone(number);
+   </script>
+</body>
+</html>
