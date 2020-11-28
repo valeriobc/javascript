@@ -9,7 +9,7 @@ function validatePhone(num) {
       console.log('The number is valid.');
    }
    else {
-      //let num = prompt('Enter number in XXX-XXX-XXXX format');
+      //let num = prompt('Enter number in XXX-XXX-XXXX, format');
       console.log('Entrando nº 234-322-3432');
       let num2 = '234-322-3432';
       validatePhone(num2);
