@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+   <title>Ex04 RegEx</title>
+</head>
+
+<body>
+   <script>
+      function validateEmail(email) {
+         // padrão regex para email
+         const re = /\S+@\S+\.\S+/g;
+
+         // verifica se o email é válido
+         let result = re.test(email);
+         window.alert(result);
+         if (result) {
+            window.alert('The email is valid.');
+         } else {
+            let newEmail = window.prompt('Entre um valid email: ');
+            validateEmail(newEmail);
+         }
+      }
+
+      // take input
+      let email = window.prompt('Enter an email: ');
+      validateEmail(email);
+   </script>
+</body>
+
+</html>
